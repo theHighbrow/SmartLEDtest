@@ -11,10 +11,10 @@ const mqtt = require("mqtt");
 
 
 const REST_PORT = (process.env.PORT || 5000);
-const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || 'e865f72c9d8b40a788359bc8a2534872';
+const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN || '7b4a9d75357f4ae89c29ed008a9bf894';
 const APIAI_LANG = process.env.APIAI_LANG || 'en';
-const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN || '123456789';
-const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAAGoWROQJuoBAOeE2ZB4ZBeSNAgXl4sdOHExz9aGqTQPTH02oZASBZAGDC4BdRNBopZCFuTrKYdlqJahG2BUUfo5piNZAII9w2fzNl17JwEQl4Eu3d25r2HeZCSxZCwQo4P1vzXSR27zhy0NLWpvzO0sH2sEiT9PpasVe725sj2C5wZDZD';
+const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN || '12345';
+const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN || 'EAAMkzxa8GaEBABpXCbEPPoas5tysLBAMIGxZB29M9ZCZCN1wdAxT0ZCNXzO44zKBf3X778JZAADiMTGHKg1Bg3V2o4LZCH3m79P05nDDsU04ZArxM8dR7a0UbIgsjoWYc5ZCR39DiRHJy4iLfMMzMqDi2XZAq4HF4xjuIVT3eJ0pidgZDZD';
 const FB_TEXT_LIMIT = 640;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
@@ -363,12 +363,16 @@ class FacebookBot {
     }
 
     connectToMQTT(msg) {
-        var url = 'mqtt://m14.cloudmqtt.com:16129';
+        //var url = 'mqtt://m14.cloudmqtt.com:16129';
+       
+        var url = 'mqtt:// m12.cloudmqtt.com:14959';
 
         var options = {
             clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
-            username: 'user1',
-            password: 'password'
+            //username: 'user1',
+            username: 'kgoctzck', 
+            //password: 'password'
+            password: '31bLpoFZ25vW'
         };
 
         var client;
